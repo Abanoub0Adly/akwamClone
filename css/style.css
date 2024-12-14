@@ -1,0 +1,325 @@
+:root {
+    --white: #fff;
+    --main-color: #f3951e;
+    --hover-transition-duaration: .1s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .55), #000), url('../images/home-bg.webp');
+    font-family: Arial;
+    direction: rtl;
+}
+
+.navbar {
+    padding: 20px 80px 100px;
+}
+
+.navbar .content-box {
+    float: left;
+}
+
+.navbar .content-box .user {
+    float: left;
+    margin-right: 30px;
+}
+
+.navbar .content-box .user i {
+    transition: var(--hover-transition-duaration);
+    cursor: pointer;
+}
+
+.navbar .content-box .user:hover i {
+    color: var(--main-color);
+}
+
+.navbar .content-box .text {
+    float: right;
+}
+
+.navbar .content-box .text a {
+    transition: var(--hover-transition-duaration);
+}
+
+.navbar .content-box .text a:hover i,
+.navbar .content-box .text a:hover {
+    color: var(--main-color);
+}
+
+.navbar .content-box .text a i {
+    margin-left: 5px;
+    transition: var(--hover-transition-duaration);
+}
+
+.navbar .content-box i {
+    color: #fff;
+}
+
+.navbar .image-box {
+    float: right;
+    cursor: pointer;
+}
+
+.navbar .image-box img {
+    width: 126px;
+    height: 42px;
+}
+
+.home-container {
+    width: 464px;
+    height: 300px;
+    margin: 40px auto 10px;
+}
+
+.outer-border {
+    position: relative;
+    margin: auto;
+    width: 258px;
+    height: 258px;
+    cursor: pointer;
+    transition: var(--hover-transition-duaration);
+}
+.outer-border::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.home-site{
+    position: absolute;
+    background-image: url(../images/site-new.webp);
+    background-position: top;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    cursor: pointer;
+    transition: background-position 5s,border-color var(--hover-transition-duaration);
+    overflow: hidden;
+}
+.home-site span{
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -78%);
+    z-index: 1000;
+    color: var(--white);
+    font-weight: bold;
+}
+.home-site::after{
+    position: absolute;
+    content: "";
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: #161619;
+    border-radius: 50%;
+}
+.home-site svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.outer-border:hover .home-site {
+    background-position: bottom;
+}
+.outer-border:hover .home-site{
+    border-color: #0d82ab;
+}
+.outer-border:hover::after {
+    border-color: #0d82ab;
+    animation: inerBorder 0.5s ease-in-out;
+}
+.outer-border:hover .home-site::after{
+    animation: logoUp 5s ease-in-out;
+}
+.search-box{
+    width: 65%;
+    margin: auto;
+}
+.search-box input[type="search"]{
+     width:  83%;
+     height: 48px;
+     border: none;
+     background-color: #1e1e21;
+     color: var(--white);
+     outline: none;
+     padding: 0 10px;
+     border-radius: 8px;
+     font-size: 15px;
+}
+.search-box input[type="search"]::-webkit-search-cancel-button{
+    appearance: none;
+}
+.search-box input[type="search"]::placeholder{
+    width: 0;
+    transition: 8s;
+}
+.search-box input[type="search"]:hover::placeholder{
+    width: 100%;
+}
+.search-box input[type="submit"]{
+    width: 15%;
+    height: 48px;
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #f3951e;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: var(--hover-transition-duaration);
+}
+.search-box input[type="submit"]:hover{
+    background-color: #df820c;
+}
+.boxs-container{
+    width: 65%;
+    margin: 20px auto;
+}
+.boxs-container .box{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 110px;
+    background-color: #1e1e21;
+    margin: 0 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: var(--hover-transition-duaration);
+}
+.boxs-container .box:hover{
+    background-color: #f3951e;
+}
+.boxs-container .box:nth-child(4){
+    margin-right: 0;
+}
+.boxs-container .box .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.boxs-container .box .text{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-80%);
+}
+.footer{
+    padding: 100px 0 0;
+    clear: both;
+}
+.footer ul{
+    padding: 0 450px;
+    list-style-type: none;
+    clear: both;
+}
+.footer .social-icons li{
+  position: relative;
+  float: left;
+  margin: 0 8px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(121, 121, 121, .1);
+  cursor: pointer;
+}
+.footer .social-icons li:hover.facebook{
+    background-color: #3b5998;
+}
+.footer .social-icons li:hover.youtube{
+    background-color: red;
+}
+.footer .social-icons li a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.footer .social-icons li a i{
+    color: #797979;
+}
+.footer .social-icons li:hover i{
+    color: white;
+}
+.footer .ul-links{
+    padding: 10px 470px;
+}
+.footer .ul-links li{
+    float: left;
+    margin: 0 5px;
+    font-size: 14px;
+}
+.footer .ul-links li a{
+    color: #797979;
+    transition: var(--hover-transition-duaration);
+}
+.footer .ul-links li a:hover{
+    color: white;
+}
+.footer-parghrap{
+    clear: both;
+    text-align: center;
+    color: #797979;
+    font-size: 14px;
+}
+@keyframes inerBorder{
+    0% {
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+    100% {
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes outerBorder{
+    0% {
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes logoUp{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
